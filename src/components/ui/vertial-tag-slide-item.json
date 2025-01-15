@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_ui_vertial_tag_slide_items",
+  "info": {
+    "displayName": "Vertial Tag Slide Item",
+    "icon": "arrowRight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
