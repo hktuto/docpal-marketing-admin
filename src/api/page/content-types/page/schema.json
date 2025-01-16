@@ -26,7 +26,12 @@
     "content": {
       "type": "dynamiczone",
       "components": [
-        "ui.vertical-tag-slide"
+        "ui.vertical-tag-slide",
+        "ui.vertial-tag-slide-item",
+        "ui.row",
+        "ui.menu",
+        "ui.hero",
+        "ui.card-slideshow"
       ]
     }
   }
