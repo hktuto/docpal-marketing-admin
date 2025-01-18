@@ -4,7 +4,8 @@
   "info": {
     "singularName": "solution",
     "pluralName": "solutions",
-    "displayName": "solution"
+    "displayName": "solution",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -30,7 +31,8 @@
         "ui.row",
         "ui.hero",
         "ui.column",
-        "ui.card-slideshow"
+        "ui.card-slideshow",
+        "ui.text"
       ]
     }
   }

@@ -30,7 +30,9 @@
         "ui.vertial-tag-slide-item",
         "ui.row",
         "ui.hero",
-        "ui.card-slideshow"
+        "ui.card-slideshow",
+        "ui.text",
+        "ui.column"
       ]
     }
   }

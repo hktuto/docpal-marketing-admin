@@ -31,7 +31,8 @@
         "ui.row",
         "ui.hero",
         "ui.column",
-        "ui.card-slideshow"
+        "ui.card-slideshow",
+        "ui.text"
       ]
     }
   }

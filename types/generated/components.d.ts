@@ -69,6 +69,16 @@ export interface UiRow extends Struct.ComponentSchema {
   };
 }
 
+export interface UiText extends Struct.ComponentSchema {
+  collectionName: 'components_ui_texts';
+  info: {
+    displayName: 'text';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+  };
+}
+
 export interface UiVertialTagSlideItem extends Struct.ComponentSchema {
   collectionName: 'components_ui_vertial_tag_slide_items';
   info: {
@@ -104,6 +114,7 @@ declare module '@strapi/strapi' {
       'ui.column': UiColumn;
       'ui.hero': UiHero;
       'ui.row': UiRow;
+      'ui.text': UiText;
       'ui.vertial-tag-slide-item': UiVertialTagSlideItem;
       'ui.vertical-tag-slide': UiVerticalTagSlide;
     }

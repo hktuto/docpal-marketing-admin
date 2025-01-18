@@ -420,6 +420,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
         'ui.hero',
         'ui.column',
         'ui.card-slideshow',
+        'ui.text',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -462,6 +463,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'ui.row',
         'ui.hero',
         'ui.card-slideshow',
+        'ui.text',
+        'ui.column',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -485,6 +488,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
 export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
   collectionName: 'solutions';
   info: {
+    description: '';
     displayName: 'solution';
     pluralName: 'solutions';
     singularName: 'solution';
@@ -501,6 +505,7 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
         'ui.hero',
         'ui.column',
         'ui.card-slideshow',
+        'ui.text',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
