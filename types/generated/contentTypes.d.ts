@@ -369,27 +369,29 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiMainMenuMainMenu extends Struct.SingleTypeSchema {
-  collectionName: 'main_menus';
+export interface ApiAppApp extends Struct.SingleTypeSchema {
+  collectionName: 'apps';
   info: {
-    displayName: 'mainMenu';
-    pluralName: 'main-menus';
-    singularName: 'main-menu';
+    description: '';
+    displayName: 'app';
+    pluralName: 'apps';
+    singularName: 'app';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    copyright: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    footer_column: Schema.Attribute.Component<'ui.column', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::main-menu.main-menu'
-    > &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::app.app'> &
       Schema.Attribute.Private;
-    menu: Schema.Attribute.Component<'ui.menu', true>;
+    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    menu: Schema.Attribute.Component<'app.menu', true>;
+    mobileLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -414,7 +416,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'ui.vertical-tag-slide',
         'ui.vertial-tag-slide-item',
         'ui.row',
-        'ui.menu',
         'ui.hero',
         'ui.card-slideshow',
       ]
@@ -946,7 +947,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::main-menu.main-menu': ApiMainMenuMainMenu;
+      'api::app.app': ApiAppApp;
       'api::page.page': ApiPagePage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

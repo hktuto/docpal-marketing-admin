@@ -26,6 +26,10 @@
         "right"
       ],
       "default": "left"
+    },
+    "fullwidth": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

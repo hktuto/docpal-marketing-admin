@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_app_menus",
+  "info": {
+    "displayName": "menu"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "open_in_new_tab": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

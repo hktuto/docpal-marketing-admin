@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ui_columns",
+  "info": {
+    "displayName": "column",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

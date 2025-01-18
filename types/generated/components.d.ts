@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AppMenu extends Struct.ComponentSchema {
+  collectionName: 'components_app_menus';
+  info: {
+    displayName: 'menu';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    open_in_new_tab: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface UiCardSlideshow extends Struct.ComponentSchema {
   collectionName: 'components_ui_card_slideshows';
   info: {
@@ -8,6 +21,18 @@ export interface UiCardSlideshow extends Struct.ComponentSchema {
   attributes: {
     content: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface UiColumn extends Struct.ComponentSchema {
+  collectionName: 'components_ui_columns';
+  info: {
+    description: '';
+    displayName: 'column';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -25,17 +50,7 @@ export interface UiHero extends Struct.ComponentSchema {
       ['left', 'center', 'right']
     > &
       Schema.Attribute.DefaultTo<'left'>;
-  };
-}
-
-export interface UiMenu extends Struct.ComponentSchema {
-  collectionName: 'components_ui_menus';
-  info: {
-    displayName: 'menu';
-  };
-  attributes: {
-    label: Schema.Attribute.String;
-    page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
+    fullwidth: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -84,9 +99,10 @@ export interface UiVerticalTagSlide extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'app.menu': AppMenu;
       'ui.card-slideshow': UiCardSlideshow;
+      'ui.column': UiColumn;
       'ui.hero': UiHero;
-      'ui.menu': UiMenu;
       'ui.row': UiRow;
       'ui.vertial-tag-slide-item': UiVertialTagSlideItem;
       'ui.vertical-tag-slide': UiVerticalTagSlide;
