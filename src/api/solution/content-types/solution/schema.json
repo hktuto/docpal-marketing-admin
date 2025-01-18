@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solutions",
+  "info": {
+    "singularName": "solution",
+    "pluralName": "solutions",
+    "displayName": "solution"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desciption": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "ui.vertical-tag-slide",
+        "ui.vertial-tag-slide-item",
+        "ui.row",
+        "ui.hero",
+        "ui.column",
+        "ui.card-slideshow"
+      ]
+    }
+  }
+}

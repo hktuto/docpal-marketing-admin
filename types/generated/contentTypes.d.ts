@@ -386,6 +386,7 @@ export interface ApiAppApp extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     footer_column: Schema.Attribute.Component<'ui.column', true>;
+    footer_logo: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::app.app'> &
       Schema.Attribute.Private;
@@ -393,6 +394,49 @@ export interface ApiAppApp extends Struct.SingleTypeSchema {
     menu: Schema.Attribute.Component<'app.menu', true>;
     mobileLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
+  collectionName: 'features';
+  info: {
+    description: '';
+    displayName: 'features';
+    pluralName: 'features';
+    singularName: 'feature';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.DynamicZone<
+      [
+        'ui.vertical-tag-slide',
+        'ui.vertial-tag-slide-item',
+        'ui.row',
+        'ui.hero',
+        'ui.column',
+        'ui.card-slideshow',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::feature.feature'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -426,6 +470,48 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
+  collectionName: 'solutions';
+  info: {
+    displayName: 'solution';
+    pluralName: 'solutions';
+    singularName: 'solution';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.DynamicZone<
+      [
+        'ui.vertical-tag-slide',
+        'ui.vertial-tag-slide-item',
+        'ui.row',
+        'ui.hero',
+        'ui.column',
+        'ui.card-slideshow',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desciption: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::solution.solution'
+    > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String &
@@ -948,7 +1034,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::app.app': ApiAppApp;
+      'api::feature.feature': ApiFeatureFeature;
       'api::page.page': ApiPagePage;
+      'api::solution.solution': ApiSolutionSolution;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

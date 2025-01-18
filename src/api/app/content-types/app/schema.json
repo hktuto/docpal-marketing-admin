@@ -42,6 +42,13 @@
     },
     "copyright": {
       "type": "string"
+    },
+    "footer_logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
