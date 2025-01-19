@@ -1,5 +1,5 @@
 export default ({ env }) => ({
-  url: "/backend",
+  url: "http://8.217.196.247/backend",
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
   },
