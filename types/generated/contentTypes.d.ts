@@ -491,6 +491,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
 export interface ApiResourceResource extends Struct.CollectionTypeSchema {
   collectionName: 'resources';
   info: {
+    description: '';
     displayName: 'resource';
     pluralName: 'resources';
     singularName: 'resource';
@@ -512,6 +513,7 @@ export interface ApiResourceResource extends Struct.CollectionTypeSchema {
     original: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
     thumbnail: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
     type: Schema.Attribute.Enumeration<
       ['Video', 'Brochure', 'Screenshot Video ']
     >;
