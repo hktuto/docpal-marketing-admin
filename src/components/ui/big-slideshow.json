@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_ui_big_slideshows",
+  "info": {
+    "displayName": "big slideshow"
+  },
+  "options": {},
+  "attributes": {
+    "slide": {
+      "displayName": "slide",
+      "type": "component",
+      "repeatable": true,
+      "component": "app.slide"
+    }
+  }
+}

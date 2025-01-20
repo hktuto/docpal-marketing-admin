@@ -1,19 +1,16 @@
 {
   "collectionName": "components_ui_card_slideshows",
   "info": {
-    "displayName": "card_slideshow"
+    "displayName": "card_slideshow",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "content": {
-      "type": "richtext"
+    "card": {
+      "displayName": "card",
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.card"
     }
   }
 }

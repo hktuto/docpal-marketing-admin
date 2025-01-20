@@ -13,14 +13,46 @@ export interface AppMenu extends Struct.ComponentSchema {
   };
 }
 
-export interface UiCardSlideshow extends Struct.ComponentSchema {
-  collectionName: 'components_ui_card_slideshows';
+export interface AppSlide extends Struct.ComponentSchema {
+  collectionName: 'components_app_slides';
   info: {
-    displayName: 'card_slideshow';
+    displayName: 'slide';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface UiBigSlideshow extends Struct.ComponentSchema {
+  collectionName: 'components_ui_big_slideshows';
+  info: {
+    displayName: 'big slideshow';
+  };
+  attributes: {
+    slide: Schema.Attribute.Component<'app.slide', true>;
+  };
+}
+
+export interface UiCard extends Struct.ComponentSchema {
+  collectionName: 'components_ui_cards';
+  info: {
+    displayName: 'card';
   };
   attributes: {
     content: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiCardSlideshow extends Struct.ComponentSchema {
+  collectionName: 'components_ui_card_slideshows';
+  info: {
+    description: '';
+    displayName: 'card_slideshow';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'ui.card', true>;
   };
 }
 
@@ -32,6 +64,8 @@ export interface UiColumn extends Struct.ComponentSchema {
   };
   attributes: {
     content: Schema.Attribute.RichText;
+    direction: Schema.Attribute.Enumeration<['left', 'right', 'center']>;
+    image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
   };
 }
@@ -62,10 +96,8 @@ export interface UiRow extends Struct.ComponentSchema {
     icon: 'bold';
   };
   attributes: {
-    content: Schema.Attribute.RichText;
-    content_position: Schema.Attribute.Enumeration<['left', 'right']> &
-      Schema.Attribute.DefaultTo<'left'>;
-    image: Schema.Attribute.Media<'images'>;
+    column: Schema.Attribute.Component<'ui.column', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -110,6 +142,9 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'app.menu': AppMenu;
+      'app.slide': AppSlide;
+      'ui.big-slideshow': UiBigSlideshow;
+      'ui.card': UiCard;
       'ui.card-slideshow': UiCardSlideshow;
       'ui.column': UiColumn;
       'ui.hero': UiHero;

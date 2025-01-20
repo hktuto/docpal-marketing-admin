@@ -27,12 +27,12 @@
       "type": "dynamiczone",
       "components": [
         "ui.vertical-tag-slide",
-        "ui.vertial-tag-slide-item",
         "ui.row",
         "ui.hero",
-        "ui.column",
         "ui.card-slideshow",
-        "ui.text"
+        "ui.text",
+        "ui.column",
+        "ui.big-slideshow"
       ]
     }
   }

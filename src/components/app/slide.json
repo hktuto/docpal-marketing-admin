@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_app_slides",
+  "info": {
+    "displayName": "slide"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

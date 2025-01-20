@@ -415,12 +415,12 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     content: Schema.Attribute.DynamicZone<
       [
         'ui.vertical-tag-slide',
-        'ui.vertial-tag-slide-item',
         'ui.row',
         'ui.hero',
-        'ui.column',
         'ui.card-slideshow',
         'ui.text',
+        'ui.column',
+        'ui.big-slideshow',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -459,12 +459,12 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     content: Schema.Attribute.DynamicZone<
       [
         'ui.vertical-tag-slide',
-        'ui.vertial-tag-slide-item',
         'ui.row',
         'ui.hero',
         'ui.card-slideshow',
         'ui.text',
         'ui.column',
+        'ui.big-slideshow',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -500,12 +500,12 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
     content: Schema.Attribute.DynamicZone<
       [
         'ui.vertical-tag-slide',
-        'ui.vertial-tag-slide-item',
         'ui.row',
         'ui.hero',
-        'ui.column',
         'ui.card-slideshow',
         'ui.text',
+        'ui.column',
+        'ui.big-slideshow',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

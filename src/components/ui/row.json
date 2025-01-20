@@ -7,24 +7,13 @@
   },
   "options": {},
   "attributes": {
-    "content": {
-      "type": "richtext"
+    "column": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.column"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "content_position": {
-      "type": "enumeration",
-      "enum": [
-        "left",
-        "right"
-      ],
-      "default": "left"
+    "title": {
+      "type": "string"
     }
   }
 }
