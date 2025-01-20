@@ -70,6 +70,16 @@ export interface UiColumn extends Struct.ComponentSchema {
   };
 }
 
+export interface UiContentSlideshow extends Struct.ComponentSchema {
+  collectionName: 'components_ui_content_slideshows';
+  info: {
+    displayName: 'content slideshow';
+  };
+  attributes: {
+    slide: Schema.Attribute.Component<'ui.column', true>;
+  };
+}
+
 export interface UiHero extends Struct.ComponentSchema {
   collectionName: 'components_ui_heroes';
   info: {
@@ -147,6 +157,7 @@ declare module '@strapi/strapi' {
       'ui.card': UiCard;
       'ui.card-slideshow': UiCardSlideshow;
       'ui.column': UiColumn;
+      'ui.content-slideshow': UiContentSlideshow;
       'ui.hero': UiHero;
       'ui.row': UiRow;
       'ui.text': UiText;

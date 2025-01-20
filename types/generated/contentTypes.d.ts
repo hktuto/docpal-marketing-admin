@@ -421,6 +421,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
         'ui.text',
         'ui.column',
         'ui.big-slideshow',
+        'ui.content-slideshow',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -465,6 +466,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'ui.text',
         'ui.column',
         'ui.big-slideshow',
+        'ui.content-slideshow',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -506,6 +508,7 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
         'ui.text',
         'ui.column',
         'ui.big-slideshow',
+        'ui.content-slideshow',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

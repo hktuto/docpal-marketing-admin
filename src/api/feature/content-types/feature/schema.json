@@ -32,7 +32,8 @@
         "ui.card-slideshow",
         "ui.text",
         "ui.column",
-        "ui.big-slideshow"
+        "ui.big-slideshow",
+        "ui.content-slideshow"
       ]
     }
   }
