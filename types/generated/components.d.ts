@@ -16,16 +16,18 @@ export interface AppMenu extends Struct.ComponentSchema {
 export interface AppSlide extends Struct.ComponentSchema {
   collectionName: 'components_app_slides';
   info: {
+    description: '';
     displayName: 'slide';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images' | 'videos'>;
   };
 }
 
 export interface UiBigSlideshow extends Struct.ComponentSchema {
   collectionName: 'components_ui_big_slideshows';
   info: {
+    description: '';
     displayName: 'big slideshow';
   };
   attributes: {
@@ -36,11 +38,12 @@ export interface UiBigSlideshow extends Struct.ComponentSchema {
 export interface UiCard extends Struct.ComponentSchema {
   collectionName: 'components_ui_cards';
   info: {
+    description: '';
     displayName: 'card';
   };
   attributes: {
     content: Schema.Attribute.RichText;
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images' | 'videos'>;
     title: Schema.Attribute.String;
   };
 }
@@ -65,7 +68,7 @@ export interface UiColumn extends Struct.ComponentSchema {
   attributes: {
     content: Schema.Attribute.RichText;
     direction: Schema.Attribute.Enumeration<['left', 'right', 'center']>;
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images' | 'videos'>;
     title: Schema.Attribute.String;
   };
 }
@@ -88,7 +91,7 @@ export interface UiHero extends Struct.ComponentSchema {
     icon: 'bell';
   };
   attributes: {
-    background: Schema.Attribute.Media<'images'>;
+    background: Schema.Attribute.Media<'images' | 'videos'>;
     content: Schema.Attribute.RichText;
     content_positioin: Schema.Attribute.Enumeration<
       ['left', 'center', 'right']
@@ -130,7 +133,7 @@ export interface UiVertialTagSlideItem extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.RichText;
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images' | 'videos'>;
     title: Schema.Attribute.String;
   };
 }
