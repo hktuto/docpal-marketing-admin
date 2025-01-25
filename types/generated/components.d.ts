@@ -3,9 +3,11 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface AppMenu extends Struct.ComponentSchema {
   collectionName: 'components_app_menus';
   info: {
+    description: '';
     displayName: 'menu';
   };
   attributes: {
+    dropdown: Schema.Attribute.Component<'ui.text', false>;
     label: Schema.Attribute.String;
     link: Schema.Attribute.String;
     open_in_new_tab: Schema.Attribute.Boolean &
@@ -21,6 +23,8 @@ export interface AppSlide extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'videos'>;
+    overlay: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tagline: Schema.Attribute.String;
   };
 }
 

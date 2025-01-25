@@ -14,6 +14,19 @@
         "images",
         "videos"
       ]
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "overlay": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
