@@ -73,6 +73,7 @@ export interface UiColumn extends Struct.ComponentSchema {
     content: Schema.Attribute.RichText;
     direction: Schema.Attribute.Enumeration<['left', 'right', 'center']>;
     image: Schema.Attribute.Media<'images' | 'videos'>;
+    span: Schema.Attribute.Integer;
     title: Schema.Attribute.String;
   };
 }

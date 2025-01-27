@@ -28,6 +28,9 @@
         "right",
         "center"
       ]
+    },
+    "span": {
+      "type": "integer"
     }
   }
 }
