@@ -1,12 +1,16 @@
 {
   "collectionName": "components_ui_texts",
   "info": {
-    "displayName": "text"
+    "displayName": "text",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "content": {
       "type": "richtext"
+    },
+    "class": {
+      "type": "string"
     }
   }
 }

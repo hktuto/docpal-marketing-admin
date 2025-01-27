@@ -22,6 +22,7 @@ export interface AppSlide extends Struct.ComponentSchema {
     displayName: 'slide';
   };
   attributes: {
+    class: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'videos'>;
     overlay: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     tagline: Schema.Attribute.String;
@@ -46,6 +47,7 @@ export interface UiCard extends Struct.ComponentSchema {
     displayName: 'card';
   };
   attributes: {
+    class: Schema.Attribute.String;
     content: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<'images' | 'videos'>;
     title: Schema.Attribute.String;
@@ -60,6 +62,7 @@ export interface UiCardSlideshow extends Struct.ComponentSchema {
   };
   attributes: {
     card: Schema.Attribute.Component<'ui.card', true>;
+    class: Schema.Attribute.String;
   };
 }
 
@@ -70,6 +73,7 @@ export interface UiColumn extends Struct.ComponentSchema {
     displayName: 'column';
   };
   attributes: {
+    class: Schema.Attribute.String;
     content: Schema.Attribute.RichText;
     direction: Schema.Attribute.Enumeration<['left', 'right', 'center']>;
     image: Schema.Attribute.Media<'images' | 'videos'>;
@@ -81,9 +85,11 @@ export interface UiColumn extends Struct.ComponentSchema {
 export interface UiContentSlideshow extends Struct.ComponentSchema {
   collectionName: 'components_ui_content_slideshows';
   info: {
+    description: '';
     displayName: 'content slideshow';
   };
   attributes: {
+    class: Schema.Attribute.String;
     slide: Schema.Attribute.Component<'ui.column', true>;
   };
 }
@@ -97,6 +103,7 @@ export interface UiHero extends Struct.ComponentSchema {
   };
   attributes: {
     background: Schema.Attribute.Media<'images' | 'videos'>;
+    class: Schema.Attribute.String;
     content: Schema.Attribute.RichText;
     content_positioin: Schema.Attribute.Enumeration<
       ['left', 'center', 'right']
@@ -114,6 +121,7 @@ export interface UiRow extends Struct.ComponentSchema {
     icon: 'bold';
   };
   attributes: {
+    class: Schema.Attribute.String;
     column: Schema.Attribute.Component<'ui.column', true>;
     title: Schema.Attribute.String;
   };
@@ -122,9 +130,11 @@ export interface UiRow extends Struct.ComponentSchema {
 export interface UiText extends Struct.ComponentSchema {
   collectionName: 'components_ui_texts';
   info: {
+    description: '';
     displayName: 'text';
   };
   attributes: {
+    class: Schema.Attribute.String;
     content: Schema.Attribute.RichText;
   };
 }

@@ -31,6 +31,9 @@
     "fullwidth": {
       "type": "boolean",
       "default": false
+    },
+    "class": {
+      "type": "string"
     }
   }
 }
