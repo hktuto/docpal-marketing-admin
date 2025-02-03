@@ -46,6 +46,20 @@
     },
     "tag": {
       "type": "string"
+    },
+    "feature": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "mobile_feature": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

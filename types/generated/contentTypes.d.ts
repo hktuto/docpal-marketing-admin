@@ -428,6 +428,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    feature: Schema.Attribute.Media<'images' | 'files'>;
     image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -435,6 +436,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
       'api::feature.feature'
     > &
       Schema.Attribute.Private;
+    mobile_feature: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -551,6 +553,7 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     desciption: Schema.Attribute.Text;
+    feature: Schema.Attribute.Media<'images'>;
     image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -558,6 +561,7 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
       'api::solution.solution'
     > &
       Schema.Attribute.Private;
+    mobile_feature: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &

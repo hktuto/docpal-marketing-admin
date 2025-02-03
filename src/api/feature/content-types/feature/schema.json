@@ -37,6 +37,22 @@
       ]
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "feature": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "mobile_feature": {
       "allowedTypes": [
         "images"
       ],
