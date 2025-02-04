@@ -385,6 +385,7 @@ export interface ApiAppApp extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    feature: Schema.Attribute.Media<'images'>;
     footer_column: Schema.Attribute.Component<'ui.column', true>;
     footer_logo: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -394,6 +395,7 @@ export interface ApiAppApp extends Struct.SingleTypeSchema {
     menu: Schema.Attribute.Component<'app.menu', true>;
     mobileLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
+    solution: Schema.Attribute.Media<'images'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

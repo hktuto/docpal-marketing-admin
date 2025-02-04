@@ -44,6 +44,21 @@
       "type": "string"
     },
     "footer_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "feature": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "solution": {
       "allowedTypes": [
         "images"
       ],
