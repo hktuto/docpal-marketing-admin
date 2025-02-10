@@ -63,6 +63,13 @@
     },
     "tag": {
       "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "unique": true,
+      "min": 0
     }
   }
 }

@@ -48,18 +48,27 @@
       "type": "string"
     },
     "feature": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "mobile_feature": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "unique": true,
+      "min": 0
     }
   }
 }

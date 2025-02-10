@@ -441,6 +441,16 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     mobile_feature: Schema.Attribute.Media<'images'>;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -567,6 +577,16 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     mobile_feature: Schema.Attribute.Media<'images'>;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
