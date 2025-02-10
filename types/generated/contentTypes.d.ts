@@ -395,6 +395,7 @@ export interface ApiAppApp extends Struct.SingleTypeSchema {
     menu: Schema.Attribute.Component<'app.menu', true>;
     mobileLogo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
+    resource: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     solution: Schema.Attribute.Media<'images'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
