@@ -29,6 +29,18 @@ export interface AppSlide extends Struct.ComponentSchema {
   };
 }
 
+export interface AppSocial extends Struct.ComponentSchema {
+  collectionName: 'components_app_socials';
+  info: {
+    displayName: 'social';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface UiBigSlideshow extends Struct.ComponentSchema {
   collectionName: 'components_ui_big_slideshows';
   info: {
@@ -171,6 +183,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'app.menu': AppMenu;
       'app.slide': AppSlide;
+      'app.social': AppSocial;
       'ui.big-slideshow': UiBigSlideshow;
       'ui.card': UiCard;
       'ui.card-slideshow': UiCardSlideshow;
