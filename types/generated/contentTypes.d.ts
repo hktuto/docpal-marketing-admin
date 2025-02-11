@@ -452,6 +452,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
       > &
       Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
+    related_tag: Schema.Attribute.String;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -588,6 +589,7 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
       > &
       Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
+    related_tag: Schema.Attribute.String;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
