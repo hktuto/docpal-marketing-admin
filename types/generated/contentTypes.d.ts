@@ -577,6 +577,7 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
       'api::solution.solution'
     > &
       Schema.Attribute.Private;
+    long_description: Schema.Attribute.RichText;
     mobile_feature: Schema.Attribute.Media<'images'>;
     order: Schema.Attribute.Integer &
       Schema.Attribute.Required &

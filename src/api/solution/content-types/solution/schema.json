@@ -72,6 +72,9 @@
     },
     "related_tag": {
       "type": "string"
+    },
+    "long_description": {
+      "type": "richtext"
     }
   }
 }
