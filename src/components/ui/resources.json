@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_ui_resources",
+  "info": {
+    "displayName": "resources",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "resources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resource.resource"
+    }
+  }
+}

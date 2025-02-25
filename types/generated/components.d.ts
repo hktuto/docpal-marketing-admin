@@ -125,6 +125,17 @@ export interface UiHero extends Struct.ComponentSchema {
   };
 }
 
+export interface UiResources extends Struct.ComponentSchema {
+  collectionName: 'components_ui_resources';
+  info: {
+    displayName: 'resources';
+    icon: 'cog';
+  };
+  attributes: {
+    resources: Schema.Attribute.Relation<'oneToMany', 'api::resource.resource'>;
+  };
+}
+
 export interface UiRow extends Struct.ComponentSchema {
   collectionName: 'components_ui_rows';
   info: {
@@ -190,6 +201,7 @@ declare module '@strapi/strapi' {
       'ui.column': UiColumn;
       'ui.content-slideshow': UiContentSlideshow;
       'ui.hero': UiHero;
+      'ui.resources': UiResources;
       'ui.row': UiRow;
       'ui.text': UiText;
       'ui.vertial-tag-slide-item': UiVertialTagSlideItem;

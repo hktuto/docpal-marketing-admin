@@ -47,6 +47,12 @@
     },
     "industry": {
       "type": "string"
+    },
+    "solution": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::solution.solution",
+      "inversedBy": "resources"
     }
   }
 }

@@ -426,6 +426,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
         'ui.column',
         'ui.big-slideshow',
         'ui.content-slideshow',
+        'ui.resources',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -452,7 +453,6 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
       > &
       Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
-    related_tag: Schema.Attribute.String;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -486,6 +486,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'ui.column',
         'ui.big-slideshow',
         'ui.content-slideshow',
+        'ui.resources',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -531,6 +532,7 @@ export interface ApiResourceResource extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     original: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
+    solution: Schema.Attribute.Relation<'manyToOne', 'api::solution.solution'>;
     thumbnail: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
     type: Schema.Attribute.Enumeration<
@@ -564,6 +566,7 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
         'ui.column',
         'ui.big-slideshow',
         'ui.content-slideshow',
+        'ui.resources',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -592,6 +595,7 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
       Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     related_tag: Schema.Attribute.String;
+    resources: Schema.Attribute.Relation<'oneToMany', 'api::resource.resource'>;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;

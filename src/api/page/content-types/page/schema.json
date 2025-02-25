@@ -33,7 +33,8 @@
         "ui.text",
         "ui.column",
         "ui.big-slideshow",
-        "ui.content-slideshow"
+        "ui.content-slideshow",
+        "ui.resources"
       ]
     }
   }
