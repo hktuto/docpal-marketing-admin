@@ -20,7 +20,8 @@
       "enum": [
         "Video",
         "Brochure",
-        "Screenshot Video "
+        "Screenshot Video",
+        "Use Case"
       ]
     },
     "thumbnail": {
