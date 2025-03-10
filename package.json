@@ -33,5 +33,16 @@
   },
   "strapi": {
     "uuid": "10401900-7fb3-4023-a8f8-4631bf2f0b8e"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "sharp"
+    ],
+    "ignoredBuiltDependencies": [
+      "@swc/core",
+      "core-js-pure",
+      "esbuild"
+    ]
   }
 }
