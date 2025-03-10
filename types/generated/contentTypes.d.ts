@@ -408,6 +408,7 @@ export interface ApiAppApp extends Struct.SingleTypeSchema {
 export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   collectionName: 'faqs';
   info: {
+    description: '';
     displayName: 'faq';
     pluralName: 'faqs';
     singularName: 'faq';
@@ -424,6 +425,7 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'> &
       Schema.Attribute.Private;
+    order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
