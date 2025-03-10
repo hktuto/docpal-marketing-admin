@@ -564,7 +564,7 @@ export interface ApiResourceResource extends Struct.CollectionTypeSchema {
     thumbnail: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
     type: Schema.Attribute.Enumeration<
-      ['Video', 'Brochure', 'Screenshot Video ']
+      ['Video', 'Brochure', 'Screenshot Video', 'Use Case']
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
