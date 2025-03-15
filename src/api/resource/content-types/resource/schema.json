@@ -54,6 +54,9 @@
       "relation": "manyToOne",
       "target": "api::solution.solution",
       "inversedBy": "resources"
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }
